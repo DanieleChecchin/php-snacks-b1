@@ -45,10 +45,13 @@ $db = [
     <main class="container my-5">
         <section class="teachers">
             <h2>Teachers</h2>
-            <?php
-            foreach ($db as $item) {
-            }
-            ?>
+            <?php foreach ($db as $item) { ?>
+                var_dump($item);
+                <p> <?= $item['name']; ?> </p>
+                <p> <?= $item['lastname']; ?></p>
+            <?php } ?>
+
+
 
         </section>
 
