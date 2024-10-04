@@ -43,22 +43,23 @@ $db = [
      e i PM in un rettangolo verde.-->
 
     <main class="container my-5">
-        <section class="teachers">
-            <h2>Teachers</h2>
-            <?php foreach ($db as $item) { ?>
-                var_dump($item);
-                <p> <?= $item['name']; ?> </p>
-                <p> <?= $item['lastname']; ?></p>
+
+        <?php foreach ($db as $key => $list) { ?>
+            <h2>
+                <?= $key; ?>
+            </h2>
+            <?php foreach ($list as $singleKey => $singleList) { ?>
+                <ul>
+                    <li>
+                        <?= $singleList['name'] ?> <?= $singleList['lastname'] ?>
+                    </li>
+                </ul>
             <?php } ?>
+        <?php } ?>
 
 
 
-        </section>
 
-        <section class="pm">
-            <h2>Pm</h2>
-
-        </section>
     </main>
 
 
