@@ -238,6 +238,19 @@ $classi = [
     ],
 ];
 
+// 4b
+
+$studentiSufficienti = [];
+
+foreach ($classi as $classe) {
+
+    foreach ($classe as $contenutoClasse) {
+        if ($contenutoClasse['voto_medio'] >= 6) {
+            $studentiSufficienti[] = $classe;
+        }
+    }
+}
+
 ?>
 
 
