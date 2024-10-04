@@ -243,10 +243,9 @@ $classi = [
 $studentiSufficienti = [];
 
 foreach ($classi as $classe) {
-
-    foreach ($classe as $contenutoClasse) {
-        if ($contenutoClasse['voto_medio'] >= 6) {
-            $studentiSufficienti[] = $classe;
+    foreach ($classe as $alunno) {
+        if ($alunno['voto_medio'] >= 6) {
+            $studentiSufficienti[] = $alunno;
         }
     }
 }
@@ -274,7 +273,7 @@ foreach ($classi as $classe) {
                 <?= $key ?>
             </h2>
 
-            <?php foreach ($classe as $key => $contenutoClasse) { ?>
+            <?php foreach ($studentiSufficienti as $key => $contenutoClasse) { ?>
                 <!-- "Classe 1A" => [
         [
             "id" => 1,
