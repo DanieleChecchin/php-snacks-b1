@@ -254,6 +254,62 @@ $classi = [
 
 <body>
 
+    <main class="container my-5">
+
+        <?php foreach ($classi as $key => $classe) { ?>
+            <h2 class="fw-bold">
+                <?= $key ?>
+            </h2>
+
+            <?php foreach ($classe as $key => $contenutoClasse) { ?>
+                <!-- "Classe 1A" => [
+        [
+            "id" => 1,
+            "nome" => "Marco",
+            "cognome" => "Rossi",
+            "anni" => 23,
+            "voto_medio" => 8.5,
+            "linguaggio_preferito" => "PHP",
+            "immagine" => "https://source.unsplash.com/random/200x200?person",
+        ], -->
+                <ul>
+                    <li> <span class="fw-bold me-2">ID:</span> <?= $contenutoClasse['id']; ?></li>
+                    <li> <span class="fw-bold me-2">NOME:</span> <?= $contenutoClasse['nome']; ?></li>
+                    <li> <span class="fw-bold me-2">COGNOME:</span> <?= $contenutoClasse['cognome']; ?></li>
+                    <li> <span class="fw-bold me-2">ANNI:</span> <?= $contenutoClasse['anni']; ?></li>
+                    <li> <span class="fw-bold me-2">VOTO MEDIO:</span> <?= $contenutoClasse['voto_medio']; ?></li>
+                    <li> <span class="fw-bold me-2">LINGUAGGIO PREFERIT0</span>:
+                        <?= $contenutoClasse['linguaggio_preferito']; ?></li>
+                    <li> <span class="fw-bold me-2">IMMAGINE:</span> <?= $contenutoClasse['immagine']; ?></li>
+                </ul>
+
+            <?php } ?>
+        <?php } ?>
+
+    </main>
+
 </body>
 
 </html>
+
+<!--Snack 4A:
+Stampare in pagina, senza particolare stilizzazione il nome di ogni classe e sotto ognuna, 
+i dati di ogni studente/studentessa presente nella relativa classe.
+
+Snack 4B:
+Filtrare il nostro array e mostrare, sempre suddivisi per classe, 
+esclusivamente gli studenti e le studentesse con voto medio sufficiente.
+
+Snack 4C:
+Commentiamo il filtro del punto 4B (lasciatelo nel codice, in modo che possiamo comunque vederlo) 
+e aggiungiamo un minimo di stile a piacere. Inseriamo quindi un form in cui l’utente possa inserire 
+un input con il voto medio massimo, e filtriamo in base ad esso solo gli studenti che abbiano una 
+media esclusivamente inferiore al voto inserito.
+
+Snack 4D:
+Aggiungiamo un input che consenta l’inserimento del linguaggio di programmazione preferito, 
+e filtriamo in base ad esso solo gli studenti che abbiano quel linguaggio come preferito.
+
+Bonus:
+Implementare funzionalita’ di filtraggio aggiuntive basate, ad esempio, su nome, 
+cognome o anni dei relativi studenti, o magari sul nome della nostra classe.-->
