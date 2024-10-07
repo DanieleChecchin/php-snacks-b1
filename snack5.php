@@ -1,5 +1,7 @@
 <?php
 
+require_once __DIR__ . "/functions/functions.php";
+
 ?>
 
 <!DOCTYPE html>
@@ -24,6 +26,8 @@
                 <label for="word" class="form-label">Type a word!</label>
                 <input type="text" class="form-control" id="word" name="word" placeholder="enter a word">
             </div>
+
+            <button type="submit" class="btn btn-primary">check</button>
         </form>
 
     </main>
