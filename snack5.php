@@ -28,6 +28,8 @@ require_once __DIR__ . "/functions/functions.php";
             </div>
 
             <button type="submit" class="btn btn-primary">check</button>
+
+            <h2> <?php var_dump(isPalindrome($_GET['word'])); ?> </h2>
         </form>
 
     </main>
