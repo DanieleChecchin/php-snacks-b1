@@ -253,6 +253,8 @@ foreach ($classi as $classe) {
 
 // 4c
 
+$filtroVoti;
+
 if (isset($_GET['mediaVoti'])) {
 
     $filtroVoti = [];
@@ -264,7 +266,13 @@ if (isset($_GET['mediaVoti'])) {
             }
         }
     }
+} else {
+    $filtroVoti = $classi;
 }
+
+// 4d
+
+
 
 ?>
 
@@ -288,8 +296,15 @@ if (isset($_GET['mediaVoti'])) {
         <form method="GET">
             <div class="mb-3">
                 <label for="mediaVoti" class="form-label">Media massima dei voti:</label>
-                <input type="number" class="form-control" id="mediaVoti" name="mediaVoti" min="4" max="10"
+                <input type="number" class="form-control w-25" id="mediaVoti" name="mediaVoti" min="4" max="10"
                     placeholder="Inserire la media massima dei voti">
+            </div>
+
+            <!--Form per i voti-->
+            <div class="mb-3">
+                <label for="linguaggio" class="form-label">Linguaggio preferito:</label>
+                <input type="text" class="form-control w-25" id="linguaggio" name="linguaggio"
+                    placeholder="Inserire il linguaggio">
             </div>
 
             <!--Bottoni-->
@@ -338,7 +353,7 @@ Snack 4C:
 Commentiamo il filtro del punto 4B (lasciatelo nel codice, in modo che possiamo comunque vederlo) 
 e aggiungiamo un minimo di stile a piacere. Inseriamo quindi un form in cui l’utente possa inserire 
 un input con il voto medio massimo, e filtriamo in base ad esso solo gli studenti che abbiano una 
-media esclusivamente inferiore al voto inserito.
+media esclusivamente inferiore al voto inserito.  ---V---
 
 Snack 4D:
 Aggiungiamo un input che consenta l’inserimento del linguaggio di programmazione preferito, 
